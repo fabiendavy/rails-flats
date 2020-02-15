@@ -1,0 +1,36 @@
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# This file is the source Rails uses to define your schema when running `rails
+# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
+#
+# It's strongly recommended that you check this file into your version control system.
+
+ActiveRecord::Schema.define(version: 2020_02_15_190940) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "flats", force: :cascade do |t|
+    t.integer "number_of_guests"
+    t.string "flat_type"
+    t.integer "price_per_night"
+    t.integer "single_bed"
+    t.integer "double_bed"
+    t.integer "bedrooms"
+    t.integer "bathrooms"
+    t.boolean "kitchen", default: false
+    t.boolean "wifi", default: false
+    t.boolean "television", default: false
+    t.boolean "baby_bed", default: false
+    t.boolean "park", default: false
+    t.string "host_language", default: "French"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+end
