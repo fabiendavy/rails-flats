@@ -1,0 +1,52 @@
+<div class="container new-page">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h1>Fill the form to add your flat</h1>
+      <%= simple_form_for(@flat) do |f| %>
+        <p>Describe briefly your flat</p>
+        <%= f.input :name, placeholder: "Find something cool that will appear on your card", label: false %>
+
+        <p>Where is your flat ?</p>
+        <%= f.input :address, placeholder: "10 Avenue des Champs Elysée", label: false %>
+        <%= f.input :city, placeholder: "75000 Paris", label: false %>
+
+        <p>How is your property ?</p>
+        <%= f.input :flat_type, placeholder: "Apartment / House / Room...", label: false %>
+        <%= f.input :number_of_guests, placeholder: "Number of guests", label: false %>
+        <%= f.input :price_per_night, placeholder: "Price per night", label: false %>
+
+        <p>Bedroom / Bathroom</p>
+        <%= f.input :single_bed, placeholder: "How many single bed do you have?", label: false %>
+        <%= f.input :double_bed, placeholder: "How many double bed do you have?", label: false %>
+        <%= f.input :bedrooms, placeholder: "How many bedroom?", label: false %>
+        <%= f.input :bathrooms, placeholder: "How many bathroom?", label: false %>
+
+        <p>Equipments of your good</p>
+        <div class="ml-4">
+          <%= f.input :kitchen, as: :boolean %>
+          <%= f.input :wifi, as: :boolean %>
+          <%= f.input :television, as: :boolean %>
+          <%= f.input :baby_bed, as: :boolean %>
+          <%= f.input :park, as: :boolean %>
+        </div>
+
+        <p>What languages do you speak ?</p>
+        <%= f.input :host_languages, label: false do %>
+          <select name="host_languages" class="select2 form-control" multiple="multiple">
+            <option value="French">French</option>
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="German">German</option>
+            <option value="Russian">Russian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Portugese">Portugese</option>
+            <option value="Italian">Italian</option>
+          </select>
+        <% end %>
+
+        <%= f.submit "Valid my flat", class: "btn btn-new-flat" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

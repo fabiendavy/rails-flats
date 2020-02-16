@@ -7,6 +7,20 @@ class FlatsController < ApplicationController
   def show
   end
 
+  def new
+    @flat = Flat.new
+  end
+
+  def create
+    @flat = Flat.new(flat_params)
+    if @flat.save
+      redirect_to new_flat_flat_image_path(@flat)
+    else
+      render :new
+    end
+  end
+
+
   private
 
   def set_flat
@@ -14,6 +28,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :city, :address, :number_of_guests, :flat_type, :price_per_night, :single_bed, :double_bed, :bedrooms, :bathrooms, :kitchen, :wifi, :television, :baby_bed, :park, :host_language)
+    params.require(:flat).permit(:name, :city, :address, :number_of_guests, :flat_type, :price_per_night, :single_bed, :double_bed, :bedrooms, :bathrooms, :kitchen, :wifi, :television, :baby_bed, :park, :host_languages)
   end
 end
