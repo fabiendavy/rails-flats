@@ -1,0 +1,24 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.carousel-item img {
+  height: 700px;
+  object-fit: cover;
+}
+
+.flat-infos i{
+  color: #4d4d4d;
+}
+
+p, li {
+  color: #4d4d4d;
+  font-weight: lighter;
+}
+
+.flat-infos {
+  margin: 20px;
+}
+
+.container {
+  margin-bottom: 50px;
+}

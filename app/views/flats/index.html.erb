@@ -1,0 +1,12 @@
+<div class="container">
+
+  <div class="cards">
+    <% @flats.each do |flat| %>
+      <%= link_to flat_path(flat) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= flat.flat_images[0].url %>)">
+        </div> 
+      <% end %>
+    <% end %>
+  </div>
+  
+</div>
