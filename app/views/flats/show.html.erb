@@ -1,8 +1,8 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <% @flat.flat_images.each do |image| %>
+    <% @flat.images.each do |image| %>
       <div class="carousel-item">
-        <img src=<%= image.url %> class="d-block w-100" alt="image">
+        <img src=<%= image.key %> class="d-block w-100" alt="image">
       </div>
     <% end %>
   </div>
@@ -75,6 +75,7 @@
 
       <div class="flat-infos">
         <h4>Host languages</h4>
+        
         <% @flat.host_languages.each do |language| %>
           <ul class="mt-3">
             <li><%= language %></li>

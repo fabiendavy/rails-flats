@@ -7,6 +7,10 @@ import { initSelect2 } from '../components/init_select2';
 const channels = require.context('.', true, /_channel\.js$/)
 channels.keys().forEach(channels)
 
-giveActiveClassToCarouselElement();
-fetchCity();
+// document.addEventListener('flats#show:loaded', () => {
+  giveActiveClassToCarouselElement();
+  fetchCity();
+// });
+
+
 initSelect2();
